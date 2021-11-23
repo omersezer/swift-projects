@@ -9,21 +9,33 @@ import UIKit
 
 class MovieListViewController: UIViewController {
 
+    @IBOutlet weak var tvMovieList: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func setUI() {
+        // MARK: Navigation Bar
+        setNavBar()
+        
+        // MARK: title
+        title = "Movie List"
     }
-    */
-
+    
+    func setNavBar() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(onBtnAddTapped))
+        navigationItem.rightBarButtonItem?.tintColor = .blue
+    }
+    
+    @objc func onBtnAddTapped() {
+        presentAddMovie()
+    }
+    
+    func presentAddMovie() {
+        self.navigationController?.pushViewController(AddMovieViewController(), animated: true)
+    }
+    
+    
 }

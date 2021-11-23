@@ -9,9 +9,24 @@ import UIKit
 
 class AddMovieViewController: UIViewController {
 
+    @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet weak var tfMovieName: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
+    }
+    
+    func setUI() {
+        // MARK: Title
+        title = "Add Movie"
+        
+        // MARK: btnAdd
+        btnAdd.layer.cornerRadius = 20
+        btnAdd.addTarget(self, action: #selector(onBtnAddClicked(_:)), for: .touchUpInside)
+    }
+    
+    @objc func onBtnAddClicked(_ sender: UIButton) {
+        
     }
 }
