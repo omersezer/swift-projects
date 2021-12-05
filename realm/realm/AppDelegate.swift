@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func configurationRealm() {
-        Realm.migrate()
     }
 }
 

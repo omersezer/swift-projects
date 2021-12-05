@@ -23,7 +23,6 @@ class MovieListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         tvMovieList.reloadData()
         
-            Realm.migrate()
     }
     
     func setUI() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491F3B94275CDD8500A7DF94 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F3B93275CDD8500A7DF94 /* Movie.swift */; };
 		497944B8274CCEE60089A2CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497944B7274CCEE60089A2CE /* AppDelegate.swift */; };
 		497944C1274CCEE70089A2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497944C0274CCEE70089A2CE /* Assets.xcassets */; };
 		497944C4274CCEE70089A2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497944C2274CCEE70089A2CE /* LaunchScreen.storyboard */; };
@@ -16,9 +17,11 @@
 		497944D6274CD0BC0089A2CE /* MovieListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497944D4274CD0BC0089A2CE /* MovieListViewController.xib */; };
 		497944D9274CD0CC0089A2CE /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497944D7274CD0CC0089A2CE /* AddMovieViewController.swift */; };
 		497944DA274CD0CC0089A2CE /* AddMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497944D8274CD0CC0089A2CE /* AddMovieViewController.xib */; };
+		D10CBD8C84F1CAF1F0FF656C /* Pods_realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3E9F9DEF700A271B21C8AA /* Pods_realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491F3B93275CDD8500A7DF94 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		497944B4274CCEE60089A2CE /* realm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = realm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497944B7274CCEE60089A2CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497944C0274CCEE70089A2CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		497944D4274CD0BC0089A2CE /* MovieListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListViewController.xib; sourceTree = "<group>"; };
 		497944D7274CD0CC0089A2CE /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		497944D8274CD0CC0089A2CE /* AddMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMovieViewController.xib; sourceTree = "<group>"; };
+		AC3E9F9DEF700A271B21C8AA /* Pods_realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6F671C756FB238CD57939F /* Pods-realm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm.release.xcconfig"; path = "Target Support Files/Pods-realm/Pods-realm.release.xcconfig"; sourceTree = "<group>"; };
+		D33E73D9CA04F242730BEA69 /* Pods-realm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm.debug.xcconfig"; path = "Target Support Files/Pods-realm/Pods-realm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D10CBD8C84F1CAF1F0FF656C /* Pods_realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353C028CF5B3094CE8D003FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D33E73D9CA04F242730BEA69 /* Pods-realm.debug.xcconfig */,
+				CA6F671C756FB238CD57939F /* Pods-realm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		497944AB274CCEE60089A2CE = {
 			isa = PBXGroup;
 			children = (
 				497944B6274CCEE60089A2CE /* realm */,
 				497944B5274CCEE60089A2CE /* Products */,
+				353C028CF5B3094CE8D003FC /* Pods */,
+				886799A415A9AF1AA99F43A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +93,7 @@
 		497944CB274CCEF40089A2CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				491F3B93275CDD8500A7DF94 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +127,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		886799A415A9AF1AA99F43A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC3E9F9DEF700A271B21C8AA /* Pods_realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 497944C8274CCEE70089A2CE /* Build configuration list for PBXNativeTarget "realm" */;
 			buildPhases = (
+				BDBB8B00D600527CCDC904DA /* [CP] Check Pods Manifest.lock */,
 				497944B0274CCEE60089A2CE /* Sources */,
 				497944B1274CCEE60089A2CE /* Frameworks */,
 				497944B2274CCEE60089A2CE /* Resources */,
+				446BEDF1C9A7D856A1A2CD65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +205,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		446BEDF1C9A7D856A1A2CD65 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-realm/Pods-realm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-realm/Pods-realm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-realm/Pods-realm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDBB8B00D600527CCDC904DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-realm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		497944B0274CCEE60089A2CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,6 +256,7 @@
 				497944B8274CCEE60089A2CE /* AppDelegate.swift in Sources */,
 				497944D9274CD0CC0089A2CE /* AddMovieViewController.swift in Sources */,
 				497944D5274CD0BC0089A2CE /* MovieListViewController.swift in Sources */,
+				491F3B94275CDD8500A7DF94 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +392,7 @@
 		};
 		497944C9274CCEE70089A2CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D33E73D9CA04F242730BEA69 /* Pods-realm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -348,6 +421,7 @@
 		};
 		497944CA274CCEE70089A2CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA6F671C756FB238CD57939F /* Pods-realm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
