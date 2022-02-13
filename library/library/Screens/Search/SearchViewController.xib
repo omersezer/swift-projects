@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
+            <connections>
+                <outlet property="collectionView" destination="9jF-ld-yM4" id="A8o-B9-zIP"/>
+                <outlet property="lblNoResult" destination="1d0-Ia-AGs" id="dRV-OL-EtC"/>
+                <outlet property="searchBar" destination="VHA-sD-E7K" id="SjY-H6-XPK"/>
+                <outlet property="segmentedControl" destination="jZk-Jd-DKK" id="0Ih-NH-Sd5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="T2C-zL-GX5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcL-bT-4B6">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-sD-E7K">
+                            <rect key="frame" x="0.0" y="10" width="414" height="51"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jZk-Jd-DKK">
+                            <rect key="frame" x="81.5" y="71" width="251" height="32"/>
+                            <segments>
+                                <segment title="Movies"/>
+                                <segment title="Music"/>
+                                <segment title="Apps"/>
+                                <segment title="Books"/>
+                            </segments>
+                        </segmentedControl>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9jF-ld-yM4">
+                            <rect key="frame" x="0.0" y="112" width="414" height="740"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="J16-vb-irK">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-Ia-AGs">
+                            <rect key="frame" x="20" y="413" width="374" height="26.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="1d0-Ia-AGs" firstAttribute="centerY" secondItem="XcL-bT-4B6" secondAttribute="centerY" id="1Sd-mp-eJx"/>
+                        <constraint firstItem="VHA-sD-E7K" firstAttribute="leading" secondItem="XcL-bT-4B6" secondAttribute="leading" id="32w-SN-sKm"/>
+                        <constraint firstAttribute="bottom" secondItem="9jF-ld-yM4" secondAttribute="bottom" id="5jf-YR-0Yf"/>
+                        <constraint firstItem="1d0-Ia-AGs" firstAttribute="leading" secondItem="XcL-bT-4B6" secondAttribute="leading" constant="20" id="69r-BD-IWZ"/>
+                        <constraint firstItem="jZk-Jd-DKK" firstAttribute="centerX" secondItem="XcL-bT-4B6" secondAttribute="centerX" id="7Zh-0A-qej"/>
+                        <constraint firstItem="jZk-Jd-DKK" firstAttribute="top" secondItem="VHA-sD-E7K" secondAttribute="bottom" constant="10" id="LeY-IC-hbl"/>
+                        <constraint firstItem="1d0-Ia-AGs" firstAttribute="centerX" secondItem="XcL-bT-4B6" secondAttribute="centerX" id="PLK-8A-90S"/>
+                        <constraint firstItem="VHA-sD-E7K" firstAttribute="top" secondItem="XcL-bT-4B6" secondAttribute="top" constant="10" id="Wg3-vd-XIM"/>
+                        <constraint firstItem="9jF-ld-yM4" firstAttribute="top" secondItem="jZk-Jd-DKK" secondAttribute="bottom" constant="10" id="YNg-A9-iCi"/>
+                        <constraint firstAttribute="trailing" secondItem="1d0-Ia-AGs" secondAttribute="trailing" constant="20" id="cUZ-Mc-swj"/>
+                        <constraint firstAttribute="trailing" secondItem="9jF-ld-yM4" secondAttribute="trailing" id="eHk-hS-aJa"/>
+                        <constraint firstItem="9jF-ld-yM4" firstAttribute="leading" secondItem="XcL-bT-4B6" secondAttribute="leading" id="rwK-JJ-tQW"/>
+                        <constraint firstAttribute="trailing" secondItem="VHA-sD-E7K" secondAttribute="trailing" id="tNd-Um-0Oj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="4Mc-17-18l"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Mc-17-18l" firstAttribute="leading" secondItem="XcL-bT-4B6" secondAttribute="leading" id="9cQ-Fp-rll"/>
+                <constraint firstItem="4Mc-17-18l" firstAttribute="trailing" secondItem="XcL-bT-4B6" secondAttribute="trailing" id="IlL-um-d8E"/>
+                <constraint firstItem="4Mc-17-18l" firstAttribute="top" secondItem="XcL-bT-4B6" secondAttribute="top" id="Zhl-Ke-WT2"/>
+                <constraint firstAttribute="bottom" secondItem="XcL-bT-4B6" secondAttribute="bottom" id="zM0-T4-KFR"/>
+            </constraints>
+            <point key="canvasLocation" x="462" y="399"/>
+        </view>
+    </objects>
+</document>
