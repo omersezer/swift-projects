@@ -83,7 +83,7 @@ extension SearchPresenter: SearchInteractorOutputs {
         setCollectionViewSource()
     }
     
-    func onError(error: BaseErrorModel) {
+    func onError(error: String) {
         SVProgressHUD.dismiss()
         view?.onError(err: error)
     }

@@ -1,7 +1,5 @@
 PODS:
-  - Alamofire (4.9.1)
-  - AlamofireMapper (1.0.0):
-    - Alamofire (~> 4.1)
+  - Alamofire (5.4.4)
   - IQKeyboardManagerSwift (6.5.9)
   - Kingfisher (7.1.1)
   - RxCocoa (5.1.3):
@@ -14,7 +12,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AlamofireMapper
   - IQKeyboardManagerSwift
   - Kingfisher
   - RxCocoa (~> 5)
@@ -24,7 +21,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - AlamofireMapper
     - IQKeyboardManagerSwift
     - Kingfisher
     - RxCocoa
@@ -33,8 +29,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  AlamofireMapper: bdcd94eb53ab63ec9a12e4685bba73e3d0072f36
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   Kingfisher: f738f9c4a3415823b8e2985d10aa2d6a9f37bc4d
   RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
@@ -42,6 +37,6 @@ SPEC CHECKSUMS:
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8d7e512b1ecbf79705a0a3114113558dcacee6fd
+PODFILE CHECKSUM: 0f0c2c01390b76ef22d16303a3b9dd73d007e287
 
 COCOAPODS: 1.11.2

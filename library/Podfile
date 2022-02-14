@@ -7,7 +7,6 @@ target 'library' do
 
   # Pods for library
   pod 'Alamofire'
-  pod 'AlamofireMapper'
   pod 'SVProgressHUD'
   pod 'Kingfisher'
   pod 'RxSwift', '~> 5'

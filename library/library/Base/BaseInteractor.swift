@@ -8,6 +8,5 @@
 import UIKit
 
 class BaseInteractor: NSObject {
-    let services = Services()
     let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
 }
