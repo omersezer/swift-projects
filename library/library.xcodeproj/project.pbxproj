@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4924702E27B98F2800EA1CA9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924702D27B98F2800EA1CA9 /* APIConstants.swift */; };
+		4924703027B9954400EA1CA9 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924702F27B9954400EA1CA9 /* APIRouter.swift */; };
 		497FBB7527B92F2600845149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FBB7427B92F2600845149 /* AppDelegate.swift */; };
 		497FBB7E27B92F2700845149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497FBB7D27B92F2700845149 /* Assets.xcassets */; };
 		497FBB8127B92F2700845149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497FBB7F27B92F2700845149 /* LaunchScreen.storyboard */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4924702D27B98F2800EA1CA9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		4924702F27B9954400EA1CA9 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		497FBB7127B92F2600845149 /* library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497FBB7427B92F2600845149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497FBB7D27B92F2700845149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				497FBBA127B931BF00845149 /* Services.swift */,
+				4924702F27B9954400EA1CA9 /* APIRouter.swift */,
+				4924702D27B98F2800EA1CA9 /* APIConstants.swift */,
 				497FBBA327B931CB00845149 /* Entities */,
 			);
 			path = Services;
@@ -432,6 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				497FBBD327B9335900845149 /* SearchEntities.swift in Sources */,
+				4924703027B9954400EA1CA9 /* APIRouter.swift in Sources */,
+				4924702E27B98F2800EA1CA9 /* APIConstants.swift in Sources */,
 				497FBBAB27B9320400845149 /* Routerable.swift in Sources */,
 				497FBB9927B9312100845149 /* APIErrors.swift in Sources */,
 				497FBBA927B931F200845149 /* MovieDetailModel.swift in Sources */,

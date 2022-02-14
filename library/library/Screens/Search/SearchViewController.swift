@@ -14,7 +14,7 @@ protocol SearchViewInputs: AnyObject {
     func onCollectionViewSourceReady(source: SearchCollectionViewSource?)
     func resetView()
     func showNoResult()
-    func onError(err: BaseErrorModel)
+    func onError(err: String)
 }
 
 protocol SearchViewOutputs: AnyObject {
@@ -113,8 +113,8 @@ extension SearchViewController: SearchViewInputs {
         collectionView.isHidden = true
     }
     
-    func onError(err: BaseErrorModel) {
-        AlertUtil.showStandardAlert(parentController: self, message: APIErrorGenerator().generateError(error: err))
+    func onError(err: String) {
+        AlertUtil.showStandardAlert(parentController: self, message: err)
     }
 }
 

@@ -6,36 +6,26 @@
 //
 
 import Alamofire
-import AlamofireMapper
 
 class Services {
-    let baseUrl = "https://itunes.apple.com/"
-    let limit: Int = 25
     
-    func searchMovie(searchedText: String, type: SearchTypes, successCompletion: @escaping ((_ json: MoviesModel?) -> Void), errorCompletion: @escaping ((_ error: BaseErrorModel) -> Void)) {
-        print(type.type)
-        let url = "\(baseUrl)search?term=\(searchedText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")&offset=\(limit)&limit=\(limit)&media=\(type.type)"
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseObject { (response: DataResponse<MoviesModel>) in
-            switch response.result {
-            case .success(let model):
-                successCompletion(model)
-            case .failure(let error):
-                errorCompletion(BaseErrorModel(errorCode: nil, message: nil, errors: [ErrorData(field: APIErrors.Alamofire.rawValue, message: error.localizedDescription)]))
+    static let shared = Services()
+    
+    private func request<T: Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), onSuccess: @escaping ((_ data: T?) -> Void), onError: @escaping ((_ error: String) -> Void)) {
+        AF.request(route)
+            .validate(statusCode: 200..<300)
+            .responseDecodable(decoder: decoder) { (response: AFDataResponse<T>) in
+                print(response.result)
+                switch response.result {
+                case .success(let model):
+                    onSuccess(model)
+                case .failure(let error):
+                    onError(error.localizedDescription)
+                }
             }
-        }
     }
     
-    func searchMovie(searchedText: String, page: Int, type: SearchTypes, successCompletion: @escaping ((_ json: MoviesModel?) -> Void), errorCompletion: @escaping ((_ error: BaseErrorModel) -> Void)) {
-        print(type.type)
-        let url = "\(baseUrl)search?term=\(searchedText.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")&offset=\(limit * page)&limit=\(limit)&media=\(type.type)"
-        
-        Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseObject { (response: DataResponse<MoviesModel>) in
-            switch response.result {
-            case .success(let model):
-                successCompletion(model)
-            case .failure(let error):
-                errorCompletion(BaseErrorModel(errorCode: nil, message: nil, errors: [ErrorData(field: APIErrors.Alamofire.rawValue, message: error.localizedDescription)]))
-            }
-        }
+    func search(searchedText: String, page: Int = 1, type: SearchTypes, successCompletion: @escaping ((_ data: MoviesModel?) -> Void), errorCompletion: @escaping ((_ error: String) -> Void)) {
+        request(route: .search(searchedText: searchedText, page: page, type: type), onSuccess: successCompletion, onError: errorCompletion)
     }
 }
